@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Hamburguer</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        header{
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            align-items: start;
+            padding: 1rem;
+        }
+
+        nav ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li{
+            margin-right: 1rem;
+        }
+
+        nav a{
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .btn-menu{
+            background-color: transparent;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            margin: 0.5rem;
+            color: #fff;
+            font-size: 1.5rem;
+            display: none;
+        }
+
+        @media (max-width : 600px) {
+            .btn-menu{
+                display: block;
+                position: sticky;
+                top: 0;
+            }
+
+            header{
+                flex-direction: column;
+            }
+
+            .menu{
+                display: none;
+            }
+
+            .menu ul{
+                flex-direction: column;
+            }
+
+            .menu li{
+                margin: 0.5rem 0;
+            }
+
+            .menu.active{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="btn-menu">&#9776;</button>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <script>
+        const btnMenu = document.querySelector('.btn-menu');
+        const menu = document.querySelector('.menu');
+
+        btnMenu.addEventListener('click', () => {
+            menu.classList.toggle('active');
+
+        });
+    </script>
+</body>
+</html>

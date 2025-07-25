@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa de TI</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <h1 class="destaque">Empresa de Tecnologia da Informação</h1>
+    </header>
+    <main>
+        <section id="importante" class="introducao">
+            <h2>Introdução</h2>
+            <p>Uma empresa de tecnologia da informação (TI) surge em um cenário digital em constante evolução, onde a inovação e a eficiência são pilares para o sucesso. Nosso objetivo é impulsionar negócios através de soluções tecnológicas sob medida, abrangendo desde o desenvolvimento de software e a implementação de infraestrutura de rede até consultoria especializada e segurança cibernética. Acreditamos que a tecnologia, quando bem aplicada, é a chave para otimizar processos, aprimorar a comunicação e abrir novas oportunidades de mercado, permitindo que nossos clientes alcancem seus objetivos estratégicos com maior agilidade e competitividade.</p>
+        </section>
+        <section id="missao" class="missao">
+            <h2>Missão</h2>
+            <p>Nossa missão é transformar desafios de negócios em oportunidades através da tecnologia. Para isso, dedicamo-nos a fornecer soluções de TI inovadoras, personalizadas e de alta qualidade, que agreguem valor real aos nossos clientes. Comprometemo-nos a atuar com ética, transparência e responsabilidade, buscando a melhoria contínua de nossos serviços e o desenvolvimento profissional de nossa equipe. Através da paixão pela tecnologia e da profunda compreensão das necessidades de nossos parceiros, capacitamos empresas a crescer, inovar e se destacar em um mundo cada vez mais conectado.</p>
+        </section>
+        <section id="visao" class="visao">
+            <h2>Visão</h2>
+            <p>Nossa visão é ser a referência em soluções de TI no Brasil, reconhecida pela excelência técnica, inovação contínua e pelo impacto positivo que geramos nos negócios de nossos clientes. Buscamos um futuro onde empresas de todos os portes e segmentos possam prosperar no ambiente digital, munidas de ferramentas robustas e seguras que as capacitem a tomar decisões assertivas e a se adaptar rapidamente às demandas do mercado global. Aspiramos a ser sinônimo de confiança e vanguarda tecnológica, construindo parcerias duradouras baseadas em resultados e na satisfação plena de nossos colaboradores e clientes.</p>
+        </section>
+        <button id="open-modal" class="open-modal">Abrir Modal</button>
+    </main>
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Conteúdo do modal</p>
+        </div>
+    </div>
+    <script>
+        const modal = document.querySelector('.modal');
+        const botaoModal = document.querySelector('.open-modal');
+        const closeModalButton = document.querySelector('.close');
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            botaoModal.addEventListener('click', () => {
+                modal.style.display = 'block';
+            });
+        
+            closeModalButton.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+        
+            window.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        })
+    </script>
+    <footer><p>&copy; 2025 - Todos os direitos reservados</p></footer>
+</body>
+</html>

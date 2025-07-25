@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid de Imagens</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            font-weight: bold;
+            background-color: #e39e9e;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+
+        }
+
+        .galeria{
+            margin: 1rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .itens{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: 1s;
+            width: 100%;
+        }
+
+        .itens:hover{
+            color: #fff;
+            border: 0.5rem rgb(188, 157, 157);
+            border-style: inset;
+            background-color: black;
+            transform:translate(10px);
+            transition: 1s;
+        }
+        legend{
+            text-align: center;
+            margin: 1rem;
+        }
+
+        .itens img{
+            border: 0.5rem rgb(188, 157, 157);
+            border-style: outset;
+            width: 100%;
+        }
+
+        @media (max-width: 1024px){
+            .galeria{
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px){
+            .galeria{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px){
+            .galeria{
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Galeria</h1>
+        <div class="galeria">
+            <div class="itens">
+                <img src="img/marvel-01.jpg" alt="Marvel">
+                <legend>Marvel</legend>
+            </div>
+            <div class="itens">
+                <img src="img/marvel-02.jpg" alt="Natasha Romanoff - Viuva Negra">
+                <legend>Natasha Romanoff - Viuva Negra</legend>
+            </div>
+            <div class="itens">
+                <img src="img/marvel-03.jpeg" alt="Thor Odinsson">
+                <legend>Thor Odinsson</legend>
+            </div>
+            <div class="itens">
+                <img src="img/marvel-04.jpeg" alt="Tony Stark - Homem de Ferro">
+                <legend>Tony Stark - Homem de Ferro</legend>
+            </div>
+            <div class="itens">
+                <img src="img/marvel-05.jpg" alt="Wanda Maximoff - Feiticeira Escarlate">
+                <legend>Wanda Maximoff - Feiticeira Escarlate</legend>
+            </div>
+            <div class="itens">
+                <img src="img/marvel-06.jpg" alt="Carol Danvers - Capitã Marvel">
+                <legend>Carol Danvers - Capitã Marvel</legend>
+            </div>
+            <div class="itens">
+                <img src="img/marvel-07.jpeg" alt="Clint Barton - Hawkeye">
+                <legend>Clint Barton - Hawkeye</legend>
+            </div>
+            <div class="itens">
+                <img src="img/marvel-08.jpg" alt="Os Vingadores">
+                <legend>Os Vingadores</legend>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

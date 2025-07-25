@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f1f1f1;
+        }
+
+        main{
+            padding: 1rem;
+
+        }
+
+        h1{
+            text-align: center;
+            margin: 2rem;
+        }
+
+        section h2{
+            margin-bottom: 1rem;
+        }
+
+        section{
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.39);
+        }
+
+        form{
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+            margin: 0 auto;           
+        }
+
+        label{
+            width: 25%;
+            margin-bottom: 0.5rem;
+        }
+
+        #endereco{
+            width: 100%;
+            margin-bottom: 0.5rem;
+        }
+
+        input, textarea{
+            width: 75%;
+            margin-bottom: 0.5rem;
+        }
+
+        button{
+            width: 100%;
+            margin-top: 1rem;
+            padding: 0.5rem;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 2rem;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Feedback</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Deixe seu feedback</h2>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label id="endereco">Endereço completo:</label>
+                <label for="rua">Rua:</label>
+                <input type="text" id="rua" name="rua">
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" name="bairro">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade">
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" name="estado">
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
